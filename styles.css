@@ -1,0 +1,217 @@
+/* 
+COLOURS
+#34282C - charcoal = body text
+#00578B - dark blue = h2 text
+#007B8C - navbar hover and button container colours
+#005F73 - dark teal = footer and button background colour
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+/* GLOBAL STYLES
+----------------------------
+*/
+body {
+    font-size: 16px; 
+    font-weight: 400;
+    font-family: 'PT Sans', sans-serif;
+    margin: 0;
+   
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'PT Sans', sans-serif;
+    color: #00578B;
+}
+/* I originally had included a letter-spacing tag for all the body content across the website, used for both paragraph and the list text, however the letter-spacing even at 1px staggered the text awkwardly. I deleted it because I decided that the spacing didn't improve readability and likely would make it harder. The information I used about letter-spacing was from the W3Schools tutorial on text spacing and indentation.*/
+a {
+    color: #3344dd;
+    }
+
+/*I didn't change the visited hyperlink colour, as I couldn't find one that I felt both fit with my chosen colour scheme and also met accessibility colour contrast guidelines, so I have left it to the default. */
+
+/* HEADER 
+*/
+header {
+    background-color: #ffffff;
+    background-image: url(images/Banner%201300px%20350px.jpg);
+    background-size: 1300px 350px;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#wrapper {
+    position: relative;
+    width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1 {
+    display: none;
+}
+
+header img {
+    position: relative;
+    top: 20px; left: 20px;
+    z-index: 1;
+    height: 145px; width: 150px;
+}
+
+/* NAVIGATION
+
+*/
+
+nav {
+    background-color: rgba(0,0,0,0.65);
+    position: absolute;       
+    top: 0px; left: 0px;
+    width: 100%;
+    padding-top: 45px; 
+}
+
+nav ul {
+    padding-left: 200px;
+    list-style: none;
+    width: 800px;
+}
+
+nav li {
+    display: inline;
+    border-right: 1px solid #bbb;  
+}
+
+
+nav li:last-child {
+    border-right: none;
+}
+
+nav li a {
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+nav a:visited {
+    color: #ffffff;
+}
+
+nav a:hover{
+    background-color: #007b8c;
+    border: none;
+}
+
+/*The nav bar for the most part worked when I followed the workshop steps. I struggled with the nav hover combined with the right-hand side border, and still haven't been able to get the hover container to touch the border properly. Because of my limited experience, I suspect it might be a padding issue, but I didn't want to play around too much and then make myself more confused. 
+When I researched how to get each of the navbar items the same size, I found a lot of options and was a bit overwhelmed. The CSS options I tried didn't seem to have any effect, and I didn't want to alter the HTML code I had written, so I left them as is.
+I used the W3Schools tutorial pages on the navigation bar for additional help that the workshop couldn't provide, as they allowed me to see how alternate code looked and get an understanding for the jargon that is used for when I needed to look something up.
+*/
+
+/* CONTENT 1
+
+*/
+
+#three-columns {
+    display: inline-flex;
+    margin: 30px 0;
+    height: 400px; 
+    text-align: left;
+}
+
+#three-columns section {
+    padding: 0 20px;
+    border: 1px solid; 
+    flex-basis: 100%;
+}
+/*I followed the weekly tutorials for the basic set up of the home page, simply because I have had very little experience with coding and didn't feel confident expanding into something unknown without fully understanding what I'm doing. 
+Despite my best efforts I wasn't able to make my flexbox columns all the same width. I found several forums that suggested ideas, such as adjusting the flex-basis, using min-max width, or simply defining the width with a px number, but I was unable to get them to work properly.
+*/
+
+.button {
+    border-style: none;
+    background-color: #00758c;
+    text-decoration: none;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 8px;
+    position: absolute;
+    align-self: flex-end;
+}
+/* I struggled to get the buttons to stay in one specific place while I was attempting media queries for the website. I found a lot of suggestions online to amend this, but again none of them seemed to work properly, and I decided to move on simply to avoid wasting time. 
+I used the W3Schools tutorials specifically on styling links and styling buttons, as I found the way everything was clearly described on those pages was extremely helpful.
+*/
+
+#maincontent{
+    margin: 30px 175px; 
+    border-bottom: 1px solid #bbb;
+}
+
+#contact {
+    margin: 30px 175px;
+}
+
+input {
+    width: 300px;
+    height: 20px;
+}
+input[type=button], input[type=submit] {
+    width: 100px;
+    height: 20px;
+    cursor: pointer;
+}
+/*Because I am still a novice when it comes to both HTML and CSS, I wasn't able to properly implement or lay the groundworks for the submit button to actually function as a submit button. I kept the design as is, solely because I would like to one day get it to work properly, but for now it doesn't function correctly. */
+
+/* CONTENT 2
+
+*/
+#secondcontent {
+    margin: 30px 175px;
+}
+
+#dvcontent {
+    margin: 30px 175px;
+}
+
+#impcontacts {
+    margin: 30px 175px;
+}
+
+/* FOOTER
+
+*/
+footer {
+    background-color: #005F73;
+    height: 50px;
+    padding: 1px;
+    width: 100%;
+    position: absolute;
+}
+footer ul {
+    list-style-type: none;
+    font-size: 14px;
+    color: #ffffff;
+    align-content: space-around;
+    text-align: center;
+}
+
+footer li {
+    display: inline;
+    padding: 10px;
+}
+footer a {
+    color: #d5ffff;
+}
+
+    
+    /* Due to my lack of experience with coding and website development, I wasn't able to implement any responsive web design. I struggled to fully understand how it was all supposed to fit together, and my attempts to fix what I had implemented weren't successful. While I did attempt to follow the week 11 workshop steps, I found that with my current level of understanding, any attempts to change things that didn't exist on the tutorial website were unsuccessful. */
